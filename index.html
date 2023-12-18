@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <div class="logo">
+        <span class="name draggable"> PAGECRAFT</span>
+      </div>
+
+      <div class="wrapper">
+        <div class="page">
+          <span class="page"> Page:</span>
+          <span class="page-name"> Home </span>
+          <figure>
+            <img
+              src="./assets/img/guide-right-down.svg"
+              alt="guide right down"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="undo-redo-wrapper">
+          <div class="undo">
+            <figure>
+              <img src="./assets/img/undo.svg" alt="undo button" />
+            </figure>
+            <div class="info-box">
+              <span class="hover-info hover-info-undo">Undo</span>
+            </div>
+          </div>
+
+          <div class="redo">
+            <figure>
+              <img src="./assets/img/redo.svg" alt="redo button" />
+            </figure>
+            <div class="info-box">
+              <span class="hover-info">Redo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="zoom-tool hover">
+          <div class="zoom-in" id="zoom-in">
+            <figure>
+              <img
+                src="./assets/img/zoom-in.svg"
+                alt="zoom in button"
+                class=""
+              />
+            </figure>
+            <span>
+              <span class="label">50</span>
+              %
+            </span>
+          </div>
+          <div class="zoom-out" id="zoom-out">
+            <figure>
+              <img
+                src="./assets/img/zoom-out.svg"
+                alt="zoom out button"
+                class=""
+              />
+            </figure>
+            <span>
+              <span class="label">100 </span>
+              %
+            </span>
+          </div>
+          <div class="info-box">
+            <span id="hover-info-zoom-out" class="hover-info">
+              Zoom out to 50%</span
+            >
+            <span id="hover-info-zoom-in" class="hover-info">
+              Zoom in to 100%</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="editor-layout">
+      <div class="editor-layout-container">
+        <div class="tool-bar">
+          <div class="add-element">
+            <figure>
+              <img
+                class="add-element-icon"
+                src="./assets/img/add-icon.svg"
+                alt=""
+              />
+            </figure>
+            <div class="add-element-panel">
+              <div class="add-element-title panel-title">
+                <span class="title">Add Elements</span>
+                <figure>
+                  <img
+                    class="exit"
+                    src="./assets/img/cancel-icon.svg"
+                    alt="cross icon"
+                  />
+                </figure>
+              </div>
+              <div
+                id="add-element-panel-content"
+                class="add-element-panel-content"
+              >
+                <div class="add-element-panel-categories-list-container">
+                  <ul class="add-element-panel-categories-list">
+                    <li>Text</li>
+                    <li>Button</li>
+                  </ul>
+                </div>
+                <div class="add-element-panel-category-view"></div>
+              </div>
+            </div>
+
+            <div class="info-box info-box-element">
+              <span>Add Elements</span>
+            </div>
+          </div>
+          <!-- <div class="add-section">
+          <figure>
+            <img src="./src/img/document-icon.svg" alt="" />
+          </figure>
+          <div class="info-box">
+            <span> Add Section </span>
+          </div>
+        </div>
+        <div class="pages-and-menu">
+          <figure>
+            <img src="./src/img/menu-fries-icon.svg" alt="" />
+          </figure>
+          <div class="info-box">
+            <span>Pages & Menu </span>
+          </div>
+        </div> -->
+          <div class="templates">
+            <figure>
+              <img
+                class="select-templates-icon"
+                src="./assets/img/menu-strawberry-icon.svg"
+                alt=""
+              />
+            </figure>
+            <div class="add-template-panel">
+              <div class="add-template-title panel-title">
+                <span class="title">Select Template</span>
+                <figure>
+                  <img
+                    class="exit"
+                    src="./assets/img/cancel-icon.svg"
+                    alt="cross icon"
+                  />
+                </figure>
+              </div>
+              <div
+                id="add-template-panel-content"
+                class="add-template-panel-content"
+              >
+                <div class="add-template-panel-categories-list-container">
+                  <ul class="add-template-panel-categories-list">
+                    <li>
+                      <button
+                        onclick="loadTemplate('./templates/template1.html')"
+                      >
+                        Template 1
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onclick="loadTemplate('./templates/template2.html')"
+                      >
+                        Template 2
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="add-template-panel-category-view"></div>
+              </div>
+            </div>
+            <div class="info-box info-box-template">
+              <span>Select Template</span>
+            </div>
+          </div>
+        </div>
+        <div class="template-container" id="template-container">
+          <div class="header-layout-container" id="header-layout-wrapper">
+            <div class="header-layout-info">
+              <span class="header-layout-info-title">Header</span>
+              <!-- <button class="add-header-btn" id="add-header-btn">
+              Change Layout
+            </button> -->
+            </div>
+
+            <div id="header-layout-container"></div>
+            <!-- 
+            <div class="change-layout">
+              <button>Layout</button>
+            </div> -->
+          </div>
+
+          <div class="section-layout-container" id="section-layout-wrapper">
+            <div class="section-layout-info">
+              <span class="section-layout-info-title">Section</span>
+              <!-- <button class="add-header-btn" id="add-header-btn">
+              Change Layout
+            </button> -->
+            </div>
+            <section class="section_template">
+              <div id="section-layout-container"></div>
+            </section>
+          </div>
+
+          <div class="footer-layout-container" id="footer-layout-wrapper">
+            <div class="footer-layout-info">
+              <span class="footer-layout-info-title">Footer</span>
+              <!-- <button class="add-header-btn" id="add-header-btn">
+              Change Layout
+            </button> -->
+            </div>
+            <footer class="footer_template">
+              <div id="footer-layout-container"></div>
+            </footer>
+          </div>
+        </div>
+        <div class="style-container">
+          <div class="style-container-title">
+            <span>Style</span>
+          </div>
+          <div class="typography-container">
+            <div class="typography-title">Typography</div>
+            <div class="typography-content">
+              <div class="font-container">
+                <label for="font">Font</label>
+                <select id="font-select">
+                  <!-- <option value="">--Please choose an option--</option> -->
+                  <option value="Impact">Impact</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Helvetica">Helvetica</option>
+                  <option value="Times New Roman">Times New Roman</option>
+                  <option value="Courier New">Courier New</option>
+                  <option value="Verdana">Verdana</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Palatino">Palatino</option>
+                  <option value="Garamond">Garamond</option>
+                  <option value="Bookman">Bookman</option>
+                  <option value="Comic Sans MS">Comic Sans MS</option>
+                </select>
+              </div>
+              <div class="weight-container">
+                <label for="weight">Weight</label>
+                <select id="weight-select">
+                  <!-- <option value="">--Please choose an option--</option> -->
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="300">300</option>
+                  <option value="400">400</option>
+                  <option value="500">500</option>
+                  <option value="600">600</option>
+                  <option value="700">700</option>
+                  <option value="800">800</option>
+                  <option value="900">900</option>
+                </select>
+              </div>
+              <div class="size-container">
+                <label for="fname">Size</label>
+                <input type="number" id="size" name="size" value="" />
+              </div>
+
+              <div class="color-container">
+                <div class="color">
+                  Color: <input type="text" id="color-box" value="" />
+                  <div class="color-palette-box"></div>
+                </div>
+                <div class="color-palette" id="color-palette">
+                  <div class="red-color">
+                    <!--  Range slider for red colour -->
+                    Red:<input
+                      type="range"
+                      id="red"
+                      value="255"
+                      min="0"
+                      max="255"
+                    />
+                  </div>
+                  <div class="green-color">
+                    <!-- Range slider for green colour -->
+                    Green:<input
+                      type="range"
+                      id="green"
+                      value="255"
+                      min="0"
+                      max="255"
+                    />
+                  </div>
+                  <div class="blue-color">
+                    <!-- Range slider for blue colour -->
+                    Blue:<input
+                      type="range"
+                      id="blue"
+                      value="255"
+                      min="0"
+                      max="255"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="background-color-wrapper">
+                <div class="background-color-container">
+                  <div class="background-color">
+                    Background Color:
+                    <input type="text" id="background-color-box" value="" />
+                    <div class="background-color-palette-box"></div>
+                  </div>
+                  <div
+                    class="background-color-palette"
+                    id="background-color-palette"
+                  >
+                    <div class="red-color">
+                      <!--  Range slider for red colour -->
+                      Red:<input
+                        type="range"
+                        id="background-red"
+                        value="255"
+                        min="0"
+                        max="255"
+                      />
+                    </div>
+                    <div class="green-color">
+                      <!-- Range slider for green colour -->
+                      Green:<input
+                        type="range"
+                        id="background-green"
+                        value="255"
+                        min="0"
+                        max="255"
+                      />
+                    </div>
+                    <div class="blue-color">
+                      <!-- Range slider for blue colour -->
+                      Blue:<input
+                        type="range"
+                        id="background-blue"
+                        value="255"
+                        min="0"
+                        max="255"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/src/navbar.js"></script>
+    <script src="./assets/src/color-palet.js"></script>
+    <script src="./assets/src/index.js"></script>
+    <script src="./assets/src/editor.js"></script>
+  </body>
+</html>

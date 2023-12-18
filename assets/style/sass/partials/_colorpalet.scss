@@ -1,0 +1,128 @@
+.color-container {
+  .color {
+    position: relative;
+
+    #color-box {
+      text-align: center;
+    }
+    .color-palette-box {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-top-left-radius: 2px;
+      background: rgb(51, 51, 51);
+      top: 0;
+      left: 46px;
+    }
+  }
+  .color-palette {
+    display: none;
+    #box {
+      height: 20px;
+      width: 80%;
+      border: none;
+      outline: none;
+      outline: none;
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    /* CSS property for slider */
+    input[type="range"] {
+      -webkit-appearance: none;
+      height: 10px;
+      width: 80%;
+      border-radius: 50px;
+      outline: none;
+    }
+
+    /* CSS property for slider thumb */
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 25px;
+      width: 25px;
+      background: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+  .red-color {
+    #red {
+      background: linear-gradient(90deg, #000, red);
+    }
+  }
+
+  .green-color {
+    #green {
+      background: linear-gradient(90deg, #000, green);
+    }
+  }
+
+  .blue-color {
+    #blue {
+      background: linear-gradient(90deg, #000, blue);
+    }
+  }
+}
+
+.background-color-wrapper {
+  .background-color-container {
+    .background-color {
+      position: relative;
+
+      #background-color-box {
+        color: #000;
+        text-align: center;
+      }
+
+      .background-color-palette-box {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-top-left-radius: 2px;
+        background: rgb(51, 51, 51);
+        top: 0;
+        left: 128px;
+      }
+    }
+    .background-color-palette {
+      display: none;
+
+      /* CSS property for slider */
+      input[type="range"] {
+        -webkit-appearance: none;
+        height: 10px;
+        width: 80%;
+        border-radius: 50px;
+        outline: none;
+      }
+
+      /* CSS property for slider thumb */
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 25px;
+        width: 25px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .red-color {
+      #background-red {
+        background: linear-gradient(90deg, #000, red);
+      }
+    }
+
+    .green-color {
+      #background-green {
+        background: linear-gradient(90deg, #000, green);
+      }
+    }
+
+    .blue-color {
+      #background-blue {
+        background: linear-gradient(90deg, #000, blue);
+      }
+    }
+  }
+}

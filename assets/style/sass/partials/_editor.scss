@@ -1,0 +1,52 @@
+.tool-bar {
+  .panel-title {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  .add-element {
+    .add-element-panel {
+      position: absolute;
+      background-color: skyblue;
+      left: 3%;
+      top: 6%;
+      display: none;
+    }
+
+    .info-box {
+      top: 8%;
+      left: 50px;
+    }
+  }
+  .templates {
+    .add-template-panel {
+      position: absolute;
+      background-color: skyblue;
+      left: 3%;
+      top: 6%;
+      display: none;
+    }
+    .info-box {
+      top: 17%;
+      left: 50px;
+    }
+
+    //   .add-section {
+    //     .info-box {
+    //       top: 17%;
+    //     }
+    //     &:hover .info-box {
+    //       display: block;
+    //     }
+    //   }
+    //   .pages-and-menu {
+    //     .info-box {
+    //       top: 27%;
+    //     }
+    //     &:hover .info-box {
+    //       display: block;
+    //     }
+    //   }
+  }
+}

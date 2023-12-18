@@ -1,0 +1,45 @@
+/* styles.css */
+
+body {
+  margin: 0;
+}
+
+.template-header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.template-logo {
+  font-family: "Times New Roman";
+}
+
+.template-logo p {
+  width: 100px; /* Adjust based on your logo dimensions */
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.navbar {
+  font-family: "Verdana";
+}
+
+.navbar ul {
+  font-family: "Verdana";
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  margin-right: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}

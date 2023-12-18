@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.exit {
+  width: 12px;
+  height: 12px;
+}
+
+.info-box {
+  font-size: 16px;
+  width: 115px;
+  background-color: white;
+  color: #000;
+  padding: 10px;
+  position: absolute;
+
+  border-radius: 10px;
+  display: none;
+  text-align: center;
+}
+
+.container-border {
+  border: 2px dotted red;
+}

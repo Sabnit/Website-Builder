@@ -1,0 +1,111 @@
+.hero-container {
+  background: linear-gradient(45deg, #1b13a6 49.59%, #443cdf 88.57%), #fff;
+  padding-bottom: 175px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 39px 0;
+
+    .nav {
+      flex-wrap: wrap;
+      display: flex;
+      .header-nav {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-right: 32px;
+        color: #b6b3eb;
+        .active {
+          color: #fff;
+        }
+        .btn {
+          background: rgba(255, 255, 255, 0.1);
+          padding: 12px 24px;
+          border-radius: 8px;
+        }
+      }
+      .menu-bar {
+        display: none;
+      }
+    }
+  }
+}
+
+.heading {
+  display: flex;
+  padding-top: 89px;
+  justify-content: space-between;
+
+  .section-left {
+    max-width: 586px;
+    .title {
+      padding-bottom: 32px;
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 70px;
+      letter-spacing: -1.12px;
+      color: #fff;
+    }
+    .description {
+      color: #b6b3eb;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      padding-bottom: 32px;
+    }
+    a {
+      display: inline-flex;
+      padding: 24px 32px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .btn {
+      display: flex;
+      justify-content: flex-start;
+      gap: 32px;
+      .open-bank-account {
+        background: #fff;
+        color: #110c64;
+      }
+      .learn-more {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        background: none;
+        padding-right: 32px;
+      }
+    }
+  }
+}
+
+.information {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 52px;
+  .information-title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .information-description {
+    color: #b6b3eb;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .gap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

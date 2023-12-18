@@ -1,0 +1,26 @@
+.editor-layout {
+  position: relative;
+  .template-container {
+    position: static;
+    .header-layout-info,
+    .section-layout-info,
+    .footer-layout-info {
+      position: relative;
+    }
+
+    .header-layout-info-title,
+    .section-layout-info-title,
+    .footer-layout-info-title {
+      position: absolute;
+      right: 0;
+      color: white;
+      display: none;
+    }
+  }
+
+  .style-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
